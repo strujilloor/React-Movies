@@ -6,10 +6,10 @@ export const Navbar = () => {
             <nav className="navbar navbar-light bg-light">
                 <div className="container">
                     <a href="/" className="navbar-brand">
-                        Peliculas
+                        Netflis
                     </a>
                     <form class="form-inline">
-                        <button class="btn btn-outline-success" type="button">Agregar Pelicula</button>
+                        <button class="btn btn-outline-success" type="button">AGREGAR PELÍCULA</button>
                     </form>
                 </div>
             </nav>
