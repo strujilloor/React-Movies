@@ -9,7 +9,7 @@ export const Navbar = () => {
                         Netflis
                     </a>
                     <form class="form-inline">
-                        <button class="btn btn-outline-success" type="button">AGREGAR PELÍCULA</button>
+                        <button class="btn btn-outline-success" type="button">ADD MOVIE</button>
                     </form>
                 </div>
             </nav>
