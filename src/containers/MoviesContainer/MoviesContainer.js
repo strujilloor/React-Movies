@@ -22,7 +22,7 @@ const MoviesContainer = () => {
         <div>
             <div className="container mt-4">
                 <h3>Movies Container</h3>
-                <div className="row row-cols-4">
+                <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
                     {movies.map( ( movie ) => (
                         <MovieCard key={ movie._id }
                             image={ movie.image }
