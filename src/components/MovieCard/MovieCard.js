@@ -4,7 +4,7 @@ const MovieCard = (props) => {
 
     const container = {
         width: '100%',
-        height: '340px',
+        height: '21.25rem',
         overflow: 'hidden',
         // margin: '10px',
         position: 'relative'
