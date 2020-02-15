@@ -8,8 +8,8 @@ export const Navbar = () => {
                     <a href="/" className="navbar-brand">
                         Netflis
                     </a>
-                    <form class="form-inline">
-                        <button class="btn btn-outline-success" type="button">ADD MOVIE</button>
+                    <form className="form-inline">
+                        <button className="btn btn-outline-success" type="button">ADD MOVIE</button>
                     </form>
                 </div>
             </nav>
