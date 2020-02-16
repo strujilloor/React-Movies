@@ -7,6 +7,10 @@ const MoviesContainer = () => {
     const [ movies, setMovies ] = useState([])
 
     useEffect( () => {
+        getMovies();
+    }, []);
+
+    const getMovies = () => {
         axios.get('https://crud-movies.herokuapp.com/api/v1/getMovies')
             .then( data => {
                 // console.log(data);
@@ -16,21 +20,23 @@ const MoviesContainer = () => {
                 console.log(error)
                 setMovies([])
             })
-    }, []);
+    }
 
     return (
         <div>
             <div className="container mt-4">
-                <h3>Movies Container</h3>
+                <h3>Movies Container </h3>
                 <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
                     {movies.map( ( movie ) => (
                         <MovieCard key={ movie._id }
+                            id={ movie._id }
                             image={ movie.image }
                             title={ movie.title }
                             description={ movie.description }
                             director={ movie.director }
                             theme={ movie.theme }
                             year={ movie.year }
+                            update={ getMovies }
                         />
                     ))}
                 </div>

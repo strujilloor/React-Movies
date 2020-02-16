@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 const MovieCard = (props) => {
 
@@ -18,6 +19,20 @@ const MovieCard = (props) => {
         margin: 'auto',
         minHeight: '100%',
         minWidth: '100%'
+    }
+
+    const handleDelete = (event) => {
+        event.preventDefault();
+
+        axios.delete(`https://crud-movies.herokuapp.com/api/v1/deleteMovieById?id=${props.id}`)
+            .then(res => {
+                console.log(props.id + ' deleted');
+                // window.location.assign('/');
+                props.update();
+            })
+            .catch( error => {
+                console.log(error);
+            })
     }
 
     return (
@@ -40,9 +55,9 @@ const MovieCard = (props) => {
                     <p><b>Tema:</b> { props.theme }</p>
                 </div>
                 <div className="card-footer">
-                    <a href="" className="btn btn-primary">
+                    <button onClick={ handleDelete } className="btn btn-primary">
                         Delete
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
