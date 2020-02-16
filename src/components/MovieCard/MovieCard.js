@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 const MovieCard = (props) => {
 
@@ -28,10 +29,20 @@ const MovieCard = (props) => {
             .then(res => {
                 console.log(props.id + ' deleted');
                 // window.location.assign('/');
+                Swal.fire(
+                    'Movie Deleted',
+                    '',
+                    'success'
+                )
                 props.update();
             })
             .catch( error => {
                 console.log(error);
+                Swal.fire(
+                    'Movie not removed',
+                    '',
+                    'error'
+                )
             })
     }
 
