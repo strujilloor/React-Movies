@@ -8,7 +8,7 @@ class MovieForm extends Component {
         year: 2019,
         description: "Un súperheroe",
         image: "https://images-na.ssl-images-amazon.com/images/I/91P1wWqX63L._SL1500_.jpg",
-        theme: "acción",
+        theme: "acción", // Comedia, Terror, Drama, Infantil
         director: "Unknown"
     }
 
@@ -16,15 +16,9 @@ class MovieForm extends Component {
         event.preventDefault();
         const id = event.target.id;
         const value = event.target.value;
-        if ( id === 'image' ) {
-            this.setState({
-                [ id ] : value
-            });
-        } else {
-            this.setState({
-                [ id ] : value
-            });
-        }
+        this.setState({
+            [ id ] : value
+        });
     }
 
     submit = (event) => {
