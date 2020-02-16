@@ -16,7 +16,7 @@ const MoviesContainer = () => {
                 console.log(error)
                 setMovies([])
             })
-    })
+    }, []);
 
     return (
         <div>
