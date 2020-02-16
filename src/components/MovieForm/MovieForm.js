@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 class MovieForm extends Component {
 
@@ -24,13 +25,23 @@ class MovieForm extends Component {
     submit = (event) => {
         event.preventDefault();
         const movie = {...this.state};
-        console.log(movie);
+        // console.log(movie);
         axios.post('https://crud-movies.herokuapp.com/api/v1/createMovie', movie)
             .then(res => {
                 console.log('Saved');
+                Swal.fire(
+                    'Movie saved',
+                    '',
+                    'success'
+                )
             })
             .catch(err => {
                 console.log(err);
+                Swal.fire(
+                    'Error saving movie',
+                    '',
+                    'error'
+                )
             })
     }
 
