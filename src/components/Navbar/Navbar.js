@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     return (
         <div>
             <nav className="navbar navbar-light bg-light">
                 <div className="container">
-                    <a href="/" className="navbar-brand">
+                    <Link to="/" className="navbar-brand">
                         Netflis
-                    </a>
+                    </Link>
                     <form className="form-inline">
-                        <button className="btn btn-outline-success" type="button">ADD MOVIE</button>
+                        <Link to='/addMovie' className="btn btn-outline-success" type="button">ADD MOVIE</Link>
                     </form>
                 </div>
             </nav>
