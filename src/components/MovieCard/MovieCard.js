@@ -66,7 +66,7 @@ const MovieCard = (props) => {
                     <p><b>Tema:</b> { props.theme }</p>
                 </div>
                 <div className="card-footer">
-                    <button onClick={ handleDelete } className="btn btn-primary">
+                    <button onClick={ handleDelete } className="btn btn-outline-danger">
                         Delete
                     </button>
                 </div>
